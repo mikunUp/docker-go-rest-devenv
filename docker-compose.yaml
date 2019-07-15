@@ -1,0 +1,11 @@
+version: '3'
+services:
+  golang:
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      container_name: 'go-restapi'
+      volumes:
+        - ../go-restapi-sample/:/go/src/github.com/mikunUp/go-restapi-sample
+      ports:
+        - 1323:1323
